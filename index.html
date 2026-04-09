@@ -4,100 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peru 2027 | Expedition with Mike Robinson</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        :root {
-            --primary-blue: #005a8d;
-            --accent-red: #d9534f;
-            --light-bg: #f8f9fa;
-            --text-dark: #2c3e50;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .hero-bg { 
+            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.8)), url('https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); 
+            background-size: cover; background-position: center;
         }
-
-        body {
-            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            line-height: 1.8;
-            color: var(--text-dark);
-            margin: 0;
-            padding: 0;
-            background-color: var(--light-bg);
-        }
-
-        .hero {
-            background: linear-gradient(rgba(0, 43, 73, 0.6), rgba(0, 43, 73, 0.6)), 
-                        url('http://googleusercontent.com/image_collection/image_retrieval/388389272690217603_0');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 450px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            color: white;
-            text-align: center;
-            padding: 0 20px;
-        }
-
-        h1 {
-            font-size: 3.5rem;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
-            font-weight: 800;
-        }
-
-        .hero p {
-            font-size: 1.4rem;
-            max-width: 700px;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
-        }
-
-        .container {
-            max-width: 900px;
-            margin: -60px auto 50px;
-            padding: 0 20px;
-            position: relative;
-            z-index: 2;
-        }
-
-        .main-card {
-            background: white;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-        }
-
-        .meeting-banner {
-            background: #fff3cd;
-            border-left: 6px solid #ffc107;
-            padding: 25px;
-            margin: 30px 0;
-            border-radius: 4px;
-        }
-
-        .meeting-banner h3 {
-            margin-top: 0;
-            color: #856404;
-            display: flex;
-            align-items: center;
-        }
-
-        h2 {
-            color: var(--primary-blue);
-            font-size: 2rem;
-            border-bottom: 2px solid #eee;
-            padding-bottom: 10px;
-            margin-top: 40px;
-        }
-
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
-            border-radius: 12px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-            margin: 30px 0;
+            border-radius: 1.5rem;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         }
-
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -105,111 +28,226 @@
             width: 100%;
             height: 100%;
         }
-
-        .cta-section {
-            text-align: center;
-            margin: 50px 0;
-            padding: 40px;
-            background: var(--primary-blue);
-            color: white;
-            border-radius: 12px;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--accent-red);
-            color: white;
-            padding: 18px 35px;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            transition: transform 0.3s ease, background 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .btn:hover {
-            transform: translateY(-3px);
-            background: #c9302c;
-        }
-
-        .info-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 20px;
-            margin-top: 30px;
-        }
-
-        @media (max-width: 600px) {
-            h1 { font-size: 2.2rem; }
-            .info-grid { grid-template-columns: 1fr; }
-            .main-card { padding: 20px; }
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px;
-            color: #7f8c8d;
-            font-size: 0.9rem;
-        }
+        #toast { visibility: hidden; opacity: 0; transition: 0.3s; z-index: 100; }
+        #toast.active { visibility: visible; opacity: 1; }
+        .flyer-accent { border-left: 4px solid #3b82f6; }
     </style>
 </head>
-<body>
+<body class="bg-slate-50">
 
-    <div class="hero">
-        <h1>Peru 2027</h1>
-        <p>A Journey of Discovery, Culture, and Language</p>
-    </div>
-
-    <div class="container">
-        <div class="main-card">
-            <h2>The Adventure of a Lifetime</h2>
-            <p>I am organizing a private educational expedition to the heart of the Andes in Summer 2027. This journey is open to all students and their families—it's an incredible opportunity for <strong>anyone learning Spanish</strong> to put their skills to the test in the real world while exploring one of the world's greatest wonders.</p>
-
-            <div class="meeting-banner">
-                <h3>📍 Rescheduled Informational Meeting</h3>
-                <p><strong>When:</strong> Thursday, April 23rd @ 6:00 PM</p>
-                <p><strong>Where:</strong> Room I-3</p>
-                <p>Join us to walk through the itinerary, see photos from past trips, and learn how your family can join the expedition.</p>
+    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-200">
+        <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
+            <div class="flex items-center gap-2 font-black text-blue-900 text-lg uppercase tracking-tighter">
+                <i class="fas fa-mountain text-blue-600"></i> Peru 2027
             </div>
-
-            <h2>Watch the Journey</h2>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/S_I_O_o-A2U" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="hidden md:flex space-x-6 text-xs font-bold text-slate-600 uppercase tracking-widest">
+                <a href="#video" class="hover:text-blue-600">Watch Videos</a>
+                <a href="#meeting" class="hover:text-blue-600">Meeting</a>
+                <a href="#itinerary" class="hover:text-blue-600">Trip Info</a>
             </div>
+            <a href="https://www.bluedottours.com/Robinson-B3MU" target="_blank" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-blue-700 transition">Enroll Now</a>
+        </div>
+    </nav>
 
-            <h2>What to Expect</h2>
-            <p>We've partnered with <strong>Blue Dot Tours</strong> to provide a completely seamless, all-inclusive experience. From the historic streets of Cusco to the breathtaking heights of Machu Picchu, every detail is handled.</p>
-            
-            <div class="info-grid">
-                <div>
-                    <strong>Full Immersion</strong><br>
-                    Real-world Spanish practice and cultural exchange.
-                </div>
-                <div>
-                    <strong>Peace of Mind</strong><br>
-                    24/7 guides, all meals, flights, and secure transport included.
-                </div>
-            </div>
-
-            <p style="margin-top: 30px;"><strong>Payment Plans:</strong> We will discuss flexible monthly payment options at the meeting to make this trip accessible for your budget. No large upfront payments are required to get started!</p>
-
-            <div class="cta-section">
-                <h3>Ready to Learn More?</h3>
-                <p>Please RSVP for the meeting so we can have materials ready for you.</p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSclK7eR9u9Yv3N-N_Ush1U0v8B3Yh5w/viewform" class="btn">RSVP FOR THE MEETING</a>
-                <p style="margin-top: 20px; font-size: 0.8rem; opacity: 0.8;">Group Code: ROBINSON-B3MU</p>
+    <section class="hero-bg min-h-[85vh] flex items-center justify-center text-center text-white px-6 pt-16">
+        <div class="max-w-4xl">
+            <span class="bg-blue-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block shadow-lg">Small World. Big Possibilities.</span>
+            <h1 class="text-5xl md:text-8xl font-black mb-4 uppercase tracking-tight leading-none">Peru 2027</h1>
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-blue-300">An Expedition for All Students & Families</h2>
+            <p class="text-xl md:text-2xl font-light italic text-blue-100 mb-8 max-w-2xl mx-auto">
+                Join Mike Robinson for an educational journey of a lifetime to Machu Picchu and the Sacred Valley.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ-wL1-1XJjpOOleTJaaUrm_GbrL_0F91F5GYZaWJl1oqioA/viewform?usp=header" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition transform hover:scale-105">Meeting RSVP</a>
+                <a href="#video" class="bg-white text-blue-900 hover:bg-slate-100 px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition border border-white">Watch Trailers</a>
             </div>
         </div>
+    </section>
 
-        <footer>
-            <p>&copy; 2026 Mike Robinson Peru Expedition<br>
-            Note: This is a private educational tour and is not affiliated with or sponsored by the Box Elder School District.</p>
-        </footer>
-    </div>
+    <section class="py-12 bg-white border-b border-slate-200">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid md:grid-cols-3 gap-8 bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm">
+                <div class="flyer-accent pl-4">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Teacher</p>
+                    <p class="text-xl font-black text-blue-900 uppercase">Mike Robinson</p>
+                </div>
+                <div class="flyer-accent pl-4">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Tour Dates</p>
+                    <p class="text-xl font-black text-blue-900">7/5/2027 - 7/13/2027</p>
+                </div>
+                <div class="flyer-accent pl-4">
+                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Group Code</p>
+                    <p class="text-xl font-black text-blue-600 tracking-tight">ROBINSON-B3MU</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="video" class="py-20 bg-slate-900">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-black text-white uppercase tracking-tight">Experience the Journey</h2>
+                <p class="text-slate-400 mt-2">Watch the trailers for our 2027 expedition.</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <div class="video-container mb-4">
+                        <iframe src="https://www.youtube.com/embed/Zk9J5xnTVMA" title="Peru Video 1" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium italic text-center">Land of the Incas</p>
+                </div>
+                <div>
+                    <div class="video-container mb-4">
+                        <iframe src="https://www.youtube.com/embed/-VDhL6-8dYo" title="Peru Video 2" frameborder="0" allowfullscreen></iframe>
+                    </div>
+                    <p class="text-slate-400 text-sm font-medium italic text-center">Sacred Valley Wonders</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="meeting" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
+                <div class="lg:col-span-1 space-y-6">
+                    <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight">Meeting Info</h2>
+                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 space-y-5 shadow-sm">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-md">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-blue-500 uppercase tracking-wider">Location</p>
+                                <p class="text-blue-900 font-bold text-lg">Room I-3</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-md">
+                                <i class="fas fa-calendar-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs font-bold text-blue-500 uppercase tracking-wider">Date & Time</p>
+                                <p class="text-blue-900 font-bold text-lg">April 23 @ 6:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-blue-200 flex items-center justify-between">
+                            <div class="flex items-center gap-2">
+                                <i class="fas fa-envelope text-blue-600"></i>
+                                <a href="mailto:Mrob1606@gmail.com" class="text-blue-700 font-bold text-sm underline">Mrob1606@gmail.com</a>
+                            </div>
+                            <button onclick="copyMail()" class="text-slate-400 hover:text-blue-600 relative">
+                                <i class="fas fa-copy"></i>
+                                <span id="toast" class="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded shadow-lg">Copied!</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1">
+                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 h-full flex flex-col justify-center relative shadow-inner">
+                        <i class="fas fa-quote-left text-4xl text-blue-100 absolute top-6 left-6"></i>
+                        <p class="text-slate-700 italic leading-relaxed mb-6 pt-6 relative z-10 text-lg">
+                            "I love seeing students put their Spanish skills to the test in the real world while exploring the wonders of the Incan Empire! It turns a school trip into a shared family legacy."
+                        </p>
+                        <p class="font-bold text-slate-900 text-right">— Mike Robinson</p>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-1 bg-blue-600 text-white p-8 rounded-3xl shadow-2xl text-center flex flex-col justify-center border-b-8 border-blue-800">
+                    <h3 class="text-2xl font-bold mb-4 uppercase">Join Us</h3>
+                    <p class="text-blue-100 mb-8 text-sm leading-relaxed">Reserve your spot for the informational meeting on the 23rd. We want to ensure Room I-3 is ready for your family!</p>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ-wL1-1XJjpOOleTJaaUrm_GbrL_0F91F5GYZaWJl1oqioA/viewform?usp=header" target="_blank" class="block w-full bg-white text-blue-600 py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition shadow-lg transform hover:-translate-y-1">
+                        Open RSVP Form
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="itinerary" class="py-20 bg-slate-50 border-t border-slate-200">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-4xl font-black text-slate-900 mb-8 uppercase tracking-tight">The Itinerary</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+                            <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
+                            <div>
+                                <p class="font-bold text-lg uppercase">Lima Arrival</p>
+                                <p class="text-sm text-slate-500">Explore the "City of Kings" and coastal culture.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+                            <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
+                            <div>
+                                <p class="font-bold text-lg uppercase">Sacred Valley</p>
+                                <p class="text-sm text-slate-500">Ancient salt mines and local school visits.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+                            <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
+                            <div>
+                                <p class="font-bold text-lg uppercase">Machu Picchu</p>
+                                <p class="text-sm text-slate-500">Guided exploration of the Incan Citadel.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
+                            <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
+                            <div>
+                                <p class="font-bold text-lg uppercase">Cusco</p>
+                                <p class="text-sm text-slate-500">Historic Cathedrals and Incan history.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-10 rounded-3xl shadow-2xl border border-slate-200">
+                    <h3 class="text-2xl font-bold mb-6 text-slate-900 border-b pb-4 uppercase">
+                        All-Inclusive Package
+                    </h3>
+                    <div class="grid grid-cols-2 gap-y-4 gap-x-2 text-sm text-slate-600 mb-8">
+                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> Airfare & Transfers</div>
+                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> All Meals Daily</div>
+                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> 3 & 4-Star Hotels</div>
+                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> All Entrance Fees</div>
+                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> 24/7 Tour Director</div>
+                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> Travel Insurance</div>
+                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> Tipping Included</div>
+                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> Educational Materials</div>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center">
+                        <p class="text-slate-400 font-bold text-xs uppercase mb-1 tracking-widest">Pricing Options</p>
+                        <div class="text-2xl font-black text-blue-600 mb-4 tracking-tighter uppercase leading-tight">Monthly Payment Plans Available</div>
+                        <a href="https://www.bluedottours.com/Robinson-B3MU" target="_blank" class="w-full inline-block bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-black transition-all">Go to Enrollment Portal</a>
+                        <p class="text-xs text-slate-400 mt-4 italic">Full pricing and incentive details will be provided at the meeting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-12 bg-slate-900 text-center px-6">
+        <div class="max-w-4xl mx-auto">
+            <p class="text-slate-500 text-[10px] uppercase tracking-widest mb-6">Coordinator: Mrob1606@gmail.com | Group: ROBINSON-B3MU</p>
+            <p class="text-[10px] text-slate-700 leading-relaxed italic">
+                This tour is independent and not affiliated with or approved by Box Elder School District. Participation is strictly voluntary. All financial transactions are managed through Blue Dot Tours.
+            </p>
+        </div>
+    </footer>
+
+    <script>
+        function copyMail() {
+            const email = 'Mrob1606@gmail.com';
+            const el = document.createElement('textarea');
+            el.value = email;
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+            const toast = document.getElementById('toast');
+            toast.classList.add('active');
+            setTimeout(() => { toast.classList.remove('active'); }, 2000);
+        }
+    </script>
 </body>
 </html>
-This code is roughly 175 lines long. It includes the logic for mobile responsiveness (so it looks good on a phone) and the high-end design elements that make the trip look as important as it is.
-
-I strongly suggest using that "Preview" tab in GitHub one last time to make sure you see the mountains and the big title before you hit save!

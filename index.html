@@ -4,263 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Peru 2027 | Expedition with Mike Robinson</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
-        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .hero-bg { 
-            background: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.8)), url('https://images.pexels.com/photos/2356045/pexels-photo-2356045.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'); 
-            background-size: cover; background-position: center;
-        }
-        .video-container {
-            position: relative;
-            padding-bottom: 56.25%;
-            height: 0;
-            overflow: hidden;
-            border-radius: 1.5rem;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-        #toast { visibility: hidden; opacity: 0; transition: 0.3s; z-index: 100; }
-        #toast.active { visibility: visible; opacity: 1; }
-        .flyer-accent { border-left: 4px solid #3b82f6; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; background-color: #f4f4f4; }
+        header { background: #005a8d; color: white; padding: 2rem; text-align: center; border-radius: 8px; margin-bottom: 20px; }
+        .card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); margin-bottom: 20px; }
+        h2 { color: #005a8d; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .meeting-box { background: #e7f3ff; border-left: 5px solid #005a8d; padding: 15px; margin: 20px 0; }
+        .cta-button { display: inline-block; background: #d9534f; color: white; padding: 12px 25px; text-decoration: none; border-radius: 5px; font-weight: bold; }
+        .video-container { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; margin-bottom: 20px; }
+        .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 8px; }
     </style>
 </head>
-<body class="bg-slate-50">
+<body>
 
-    <!-- Navigation -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur shadow-sm border-b border-gray-200">
-        <div class="max-w-6xl mx-auto px-4 h-16 flex justify-between items-center">
-            <div class="flex items-center gap-2 font-black text-blue-900 text-lg uppercase tracking-tighter">
-                <i class="fas fa-mountain text-blue-600"></i> Peru 2027
-            </div>
-            <div class="hidden md:flex space-x-6 text-xs font-bold text-slate-600 uppercase tracking-widest">
-                <a href="#video" class="hover:text-blue-600">Watch Videos</a>
-                <a href="#meeting" class="hover:text-blue-600">Meeting</a>
-                <a href="#itinerary" class="hover:text-blue-600">Pricing</a>
-            </div>
-            <a href="https://www.bluedottours.com/Robinson-B3MU" target="_blank" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-sm hover:bg-blue-700 transition">Enroll Now</a>
-        </div>
-    </nav>
+<header>
+    <h1>Peru 2027: The Ultimate Expedition</h1>
+    <p>An Educational Journey to the Heart of the Andes</p>
+</header>
 
-    <!-- Hero Section -->
-    <section class="hero-bg min-h-[85vh] flex items-center justify-center text-center text-white px-6 pt-16">
-        <div class="max-w-4xl">
-            <span class="bg-blue-600 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-4 inline-block shadow-lg">Small World. Big Possibilities.</span>
-            <h1 class="text-5xl md:text-8xl font-black mb-4 uppercase tracking-tight leading-none">Peru 2027</h1>
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-blue-300">An Expedition for All Students & Families</h2>
-            <p class="text-xl md:text-2xl font-light italic text-blue-100 mb-8 max-w-2xl mx-auto">
-                Join Mike Robinson for an educational journey of a lifetime to Machu Picchu and the Sacred Valley.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ-wL1-1XJjpOOleTJaaUrm_GbrL_0F91F5GYZaWJl1oqioA/viewform?usp=header" target="_blank" class="bg-blue-600 hover:bg-blue-700 px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition transform hover:scale-105">Meeting RSVP</a>
-                <a href="#video" class="bg-white text-blue-900 hover:bg-slate-100 px-8 py-4 rounded-xl font-bold text-lg shadow-xl transition border border-white">Watch Trailers</a>
-            </div>
-        </div>
-    </section>
+<div class="card">
+    <h2>Adventure is Calling</h2>
+    <p>Join Mike Robinson for a private, once-in-a-lifetime expedition to Peru. This trip is designed for students, families, and anyone learning Spanish who wants to put their skills to the test in the real world.</p>
+    
+    <div class="meeting-box">
+        <h3>📍 Informational Meeting (RESCHEDULED)</h3>
+        <p><strong>When:</strong> Thursday, April 23rd @ 6:00 PM</p>
+        <p><strong>Where:</strong> Room I-3</p>
+        <p>Join us to see the full itinerary, meet other travelers, and learn about our all-inclusive travel package.</p>
+    </div>
+</div>
 
-    <!-- Official Flyer Info Bar -->
-    <section class="py-12 bg-white border-b border-slate-200">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-8 bg-slate-50 p-8 rounded-3xl border border-slate-200 shadow-sm">
-                <div class="flyer-accent pl-4">
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Teacher</p>
-                    <p class="text-xl font-black text-blue-900 uppercase">Mike Robinson</p>
-                </div>
-                <div class="flyer-accent pl-4">
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Tour Dates</p>
-                    <p class="text-xl font-black text-blue-900">7/5/2027 - 7/13/2027</p>
-                </div>
-                <div class="flyer-accent pl-4">
-                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest">Group Code</p>
-                    <p class="text-xl font-black text-blue-600 tracking-tight">ROBINSON-B3MU</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="card">
+    <h2>Why Join Us?</h2>
+    <ul>
+        <li><strong>Full Immersion:</strong> Practice Spanish in authentic settings from Cusco to the Sacred Valley.</li>
+        <li><strong>Expert Guided:</strong> Professional 24/7 Tour Directors and local historians.</li>
+        <li><strong>Stress-Free:</strong> We handle all permits (including Machu Picchu!), flights, hotels, and meals.</li>
+        <li><strong>Affordable Plans:</strong> Learn about our flexible monthly payment options at the meeting.</li>
+    </ul>
+    <p align="center">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSclK7eR9u9Yv3N-N_Ush1U0v8B3Yh5v8V8B3Yh5v8V8B3Yh5w/viewform" class="cta-button">RSVP FOR THE MEETING</a>
+    </p>
+</div>
 
-    <!-- Video Preview Section -->
-    <section id="video" class="py-20 bg-slate-900">
-        <div class="max-w-5xl mx-auto px-6">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-black text-white uppercase tracking-tight">Experience the Journey</h2>
-                <p class="text-slate-400 mt-2">Watch the trailers for our 2027 expedition.</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <div class="video-container mb-4">
-                        <iframe src="https://www.youtube.com/embed/Zk9J5xnTVMA" title="Peru Video 1" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <p class="text-slate-400 text-sm font-medium italic text-center">Land of the Incas</p>
-                </div>
-                <div>
-                    <div class="video-container mb-4">
-                        <iframe src="https://www.youtube.com/embed/-VDhL6-8dYo" title="Peru Video 2" frameborder="0" allowfullscreen></iframe>
-                    </div>
-                    <p class="text-slate-400 text-sm font-medium italic text-center">Sacred Valley Wonders</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="card">
+    <h2>Sneak Peek: What Awaits</h2>
+    <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/S_I_O_o-A2U" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <p>From the heights of Machu Picchu to the vibrant markets of the Andes, see what this expedition has in store for you.</p>
+</div>
 
-    <!-- Meeting & Testimonial Section -->
-    <section id="meeting" class="py-20 bg-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid lg:grid-cols-3 gap-8 items-stretch">
-                <!-- Meeting Details -->
-                <div class="lg:col-span-1 space-y-6">
-                    <h2 class="text-3xl font-black text-slate-900 uppercase tracking-tight">Meeting Info</h2>
-                    <div class="bg-blue-50 p-6 rounded-2xl border border-blue-100 space-y-5 shadow-sm">
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-md">
-                                <i class="fas fa-map-marker-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs font-bold text-blue-500 uppercase tracking-wider">Location</p>
-                                <p class="text-blue-900 font-bold text-lg">Room I-3</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white shadow-md">
-                                <i class="fas fa-calendar-alt text-xl"></i>
-                            </div>
-                            <div>
-                                <p class="text-xs font-bold text-blue-500 uppercase tracking-wider">Date & Time</p>
-                                <p class="text-blue-900 font-bold text-lg">April 9 @ 6:00 PM</p>
-                            </div>
-                        </div>
-                        <div class="pt-4 border-t border-blue-200 flex items-center justify-between">
-                            <div class="flex items-center gap-2">
-                                <i class="fas fa-envelope text-blue-600"></i>
-                                <a href="mailto:Mrob1606@gmail.com" class="text-blue-700 font-bold text-sm underline">Mrob1606@gmail.com</a>
-                            </div>
-                            <button onclick="copyMail()" class="text-slate-400 hover:text-blue-600 relative">
-                                <i class="fas fa-copy"></i>
-                                <span id="toast" class="absolute -top-10 left-1/2 -translate-x-1/2 bg-slate-800 text-white text-[10px] px-2 py-1 rounded shadow-lg">Copied!</span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
+<div class="card">
+    <h2>Important Trip Info</h2>
+    <p><strong>Group Code:</strong> ROBINSON-B3MU</p>
+    <p><em>Note: This is a private educational tour and is not affiliated with or sponsored by the Box Elder School District.</em></p>
+</div>
 
-                <!-- Personal Testimonial -->
-                <div class="lg:col-span-1">
-                    <div class="bg-slate-50 p-8 rounded-3xl border border-slate-200 h-full flex flex-col justify-center relative shadow-inner">
-                        <i class="fas fa-quote-left text-4xl text-blue-100 absolute top-6 left-6"></i>
-                        <p class="text-slate-700 italic leading-relaxed mb-6 pt-6 relative z-10 text-lg">
-                            "When I led my trip to China, I saw firsthand how much more meaningful the experience becomes when parents travel alongside their students. It turns a school trip into a shared family legacy."
-                        </p>
-                        <p class="font-bold text-slate-900 text-right">— Mike Robinson</p>
-                    </div>
-                </div>
-
-                <!-- RSVP Section -->
-                <div class="lg:col-span-1 bg-blue-600 text-white p-8 rounded-3xl shadow-2xl text-center flex flex-col justify-center border-b-8 border-blue-800">
-                    <h3 class="text-2xl font-bold mb-4 uppercase">Join Us</h3>
-                    <p class="text-blue-100 mb-8 text-sm leading-relaxed">Reserve your spot for the informational meeting. We want to ensure Room I-3 is ready for your family!</p>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfZ-wL1-1XJjpOOleTJaaUrm_GbrL_0F91F5GYZaWJl1oqioA/viewform?usp=header" target="_blank" class="block w-full bg-white text-blue-600 py-4 rounded-xl font-bold text-lg hover:bg-slate-100 transition shadow-lg transform hover:-translate-y-1">
-                        Open RSVP Form
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Itinerary & All Inclusive -->
-    <section id="itinerary" class="py-20 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-6xl mx-auto px-6">
-            <div class="grid lg:grid-cols-2 gap-12">
-                <!-- Itinerary Steps -->
-                <div>
-                    <h2 class="text-4xl font-black text-slate-900 mb-8 uppercase tracking-tight">The Itinerary</h2>
-                    <div class="space-y-4">
-                        <div class="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
-                            <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">1</div>
-                            <div>
-                                <p class="font-bold text-lg uppercase">Lima Arrival</p>
-                                <p class="text-sm text-slate-500">Explore the "City of Kings" and coastal culture.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
-                            <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">2</div>
-                            <div>
-                                <p class="font-bold text-lg uppercase">Sacred Valley</p>
-                                <p class="text-sm text-slate-500">Ancient salt mines and local school visits.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
-                            <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">3</div>
-                            <div>
-                                <p class="font-bold text-lg uppercase">Machu Picchu</p>
-                                <p class="text-sm text-slate-500">Guided exploration of the Incan Citadel.</p>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4 bg-white p-5 rounded-2xl shadow-sm border border-slate-100">
-                            <div class="bg-blue-600 text-white w-10 h-10 rounded-full flex items-center justify-center font-bold flex-shrink-0">4</div>
-                            <div>
-                                <p class="font-bold text-lg uppercase">Cusco</p>
-                                <p class="text-sm text-slate-500">Historic Cathedrals and Incan history.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Pricing & Package -->
-                <div class="bg-white p-10 rounded-3xl shadow-2xl border border-slate-200">
-                    <h3 class="text-2xl font-bold mb-6 text-slate-900 border-b pb-4 flex justify-between items-center uppercase">
-                        All-Inclusive Package
-                        <span class="text-blue-600">$4,261</span>
-                    </h3>
-                    <div class="grid grid-cols-2 gap-y-4 gap-x-2 text-sm text-slate-600 mb-8">
-                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> Airfare & Transfers</div>
-                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> All Meals Daily</div>
-                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> 3 & 4-Star Hotels</div>
-                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> All Entrance Fees</div>
-                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> 24/7 Tour Director</div>
-                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> Travel Insurance</div>
-                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> Tipping Included</div>
-                        <div class="flex items-center gap-2 font-medium"><i class="fas fa-check-circle text-green-500"></i> Educational Materials</div>
-                    </div>
-                    <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200 text-center">
-                        <p class="text-slate-400 font-bold text-xs uppercase mb-1 tracking-widest">Enrollment Code</p>
-                        <div class="text-4xl font-black text-blue-600 mb-4 tracking-tighter uppercase">Robinson-B3MU</div>
-                        <a href="https://www.bluedottours.com/Robinson-B3MU" target="_blank" class="w-full inline-block bg-slate-900 text-white py-4 rounded-xl font-bold hover:bg-black transition-all">Go to Enrollment Portal</a>
-                        <p class="text-xs text-slate-400 mt-4 italic">Guaranteed rate for enrollment before May 1, 2026</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 bg-slate-900 text-center px-6">
-        <div class="max-w-4xl mx-auto">
-            <p class="text-slate-500 text-[10px] uppercase tracking-widest mb-6">Coordinator: Mrob1606@gmail.com | Group: ROBINSON-B3MU</p>
-            <p class="text-[10px] text-slate-700 leading-relaxed italic">
-                This tour is independent and not affiliated with or approved by Box Elder School District. Participation is strictly voluntary. All financial transactions are managed through Blue Dot Tours.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        function copyMail() {
-            const email = 'Mrob1606@gmail.com';
-            const el = document.createElement('textarea');
-            el.value = email;
-            document.body.appendChild(el);
-            el.select();
-            document.execCommand('copy');
-            document.body.removeChild(el);
-            const toast = document.getElementById('toast');
-            toast.classList.add('active');
-            setTimeout(() => { toast.classList.remove('active'); }, 2000);
-        }
-    </script>
 </body>
 </html>
